@@ -4,7 +4,7 @@ volumes:
   wp-data:
 networks:
   wp-back:
-  
+
 services:
   db:
     image: mysql:5.7
@@ -19,6 +19,7 @@ services:
       - 8889:3306
     networks:
       - wp-back
+
   phpmyadmin:
     depends_on:
       - db
@@ -32,6 +33,7 @@ services:
       - 3001:80
     networks:
       - wp-back
+      
   wordpress:
     depends_on:
       - db
