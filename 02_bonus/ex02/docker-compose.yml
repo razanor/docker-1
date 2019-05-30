@@ -50,3 +50,5 @@ services:
     container_name: wordpress-site
     networks:
       - wp-back
+
+      # curl $(docker-machine ip Char):8888/wp-admin/install.php

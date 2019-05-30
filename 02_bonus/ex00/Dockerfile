@@ -1,14 +1,12 @@
-FROM ubuntu
+FROM debian
 
 MAINTAINER nrepak <nazara.re22@gmail.com>
 
-RUN apt-get update && apt-get install -y \
-	git \
+RUN apt-get update && apt-get install -y \ 
+    build-essential \
 	vim \
-	nodejs \
-	npm
-
-RUN npm install yarn --global
+    git
 
 # docker build -t bonus/ex00 .
 # docker run --rm -ti bonus/ex00
+
