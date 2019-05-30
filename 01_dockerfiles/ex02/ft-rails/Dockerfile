@@ -1,16 +1,15 @@
 FROM ruby
 
+MAINTAINER nrepak <nazara.re22@gmail.com>
+
 RUN apt-get update -y && apt-get install -y \ 
     build-essential \
     libpq-dev \ 
     nodejs \
     sqlite3
 
-MAINTAINER nrepak <nazara.re22@gmail.com>
-
 ONBUILD COPY app /opt/app
 ONBUILD WORKDIR /opt/app
-
 ONBUILD EXPOSE 3000
 ONBUILD RUN bundle install
 ONBUILD RUN rake db:migrate
