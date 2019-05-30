@@ -51,4 +51,7 @@ services:
     networks:
       - wp-back
 
+      # Run
+      # docker-compose up -d
+      
       # curl $(docker-machine ip Char):8888/wp-admin/install.php

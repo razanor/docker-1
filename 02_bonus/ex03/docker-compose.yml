@@ -12,6 +12,9 @@ services:
   redis:
     image: redis:4.0.11-alpine
 
+    # Run
+    # docker-compose up -d
+    
     # Check
     # curl --header "Content-Type: application/json" \
     #      --request POST \
